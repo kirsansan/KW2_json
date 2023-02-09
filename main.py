@@ -15,7 +15,6 @@ def main():
 
     # init variables block
     word_for_research: BasicWord = BasicWord("", [])  # custom class with words
-    temp_word: str = ""  # temporary string
     correct_answer_counter: int = 0  # I can live without you, but I like counters
     lenth_limit: int = 3  # will be recaclulate
 
