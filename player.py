@@ -1,8 +1,6 @@
 # file with class Player
 
 class Player:
-    # name: str = ""
-    # used_words: list[str] = []
 
     def __init__(self, name: str):
         self.name = name
@@ -20,7 +18,7 @@ class Player:
     def used_words_counter(self) -> int:
         """ count of used_words and return it
         """
-        return( self.used_words.__len__() )
+        return (self.used_words.__len__())
 
     def append(self, newword: str):
         """ only append new word in used_word list. nothing to return"""

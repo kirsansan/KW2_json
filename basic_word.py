@@ -2,27 +2,20 @@
 # named as it was wanted is SOW
 
 class BasicWord:
-    # word: str = ""
-    # is_correct: bool = False                   # very useless flag
-    # subwords: list[str] = []
-    # minimal_length_of_subwords: int = 0        # I can live without it
 
     def __init__(self, word: str, sublist: list[str]):
         self.word = word
         self.subwords = sublist
-        # self.minimal_length_of_subwords = 0        # and without in I can live
 
     def check_include(self, newword: str) -> bool:
         """ check that newword included in subwords list"""
-        if newword in self.subwords:
+        if newword in self.subwords:  # will check only lower words. subwords already lower by default
             return True
-        else:
-            return False
+        return False
 
     def subwords_counter(self) -> int:
-        """ count of subwords and return it
-        """
-        return (self.subwords.__len__())
+        """Сount of subwords and return it"""
+        return len(self.subwords)
 
     def calculete_minimal_length_of_sub(self) -> int:
         """Find the shortest element in subwords and return his length
@@ -36,4 +29,3 @@ class BasicWord:
 
     def __repr__(self) -> str:
         return f"BasicWord({self.word}, {str(self.subwords)})"
-

@@ -2,10 +2,6 @@
 
 
 class InputAndCheckString:
-    # we don't need use cls-variable and will use only self-variables (from __init__ constructor)
-    # input_string: str = ""
-    # is_correct: bool = False
-    # is_empty: bool = True
 
     def __init__(self, input_string: str = ""):
         self.input_string = input_string
@@ -45,7 +41,6 @@ class InputAndCheckString:
         self.input_string = ""
         self.is_correct = False
         while not self.is_correct:
-            # print(in_comment)
             self.input_string = input(in_comment)
             self.verify_empty()  # it can change is_correct flag
             # self.input_string = self.input_string.lower()
@@ -77,4 +72,3 @@ def test():
 
 if __name__ == '__main__':
     test()
-
